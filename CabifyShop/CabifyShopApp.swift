@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct CabifyShopApp: App {
+    let composer = Composer()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainPageView(
+                productsPresenter: composer.makeProductsPagePresenter()
+            )
         }
     }
 }
