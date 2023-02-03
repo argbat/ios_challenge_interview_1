@@ -9,6 +9,7 @@ import Combine
 
 /// Present data to the product page view.
 class ProductsPagePresenter: ObservableObject {
+    @Published var loading: Bool = false
     @Published var products: [ProductItemPresentable] = []
     @Published var error: ErrorPresentable = ErrorPresentable.empty
     
@@ -22,6 +23,7 @@ class ProductsPagePresenter: ObservableObject {
     }
     
     func load() {
+        loading = true
         loadProductsUseCase.execute().sink { [weak self] completion in
             switch completion {
             case .failure:
@@ -31,7 +33,7 @@ class ProductsPagePresenter: ObservableObject {
                 )
                 break
             case .finished:
-                // do nothing
+                self?.loading = false
                 break
             }
         } receiveValue: { [weak self] domianProducts in

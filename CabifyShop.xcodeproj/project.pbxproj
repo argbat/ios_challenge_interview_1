@@ -40,6 +40,9 @@
 		3B4476EE298D9DCB004D9AA5 /* ProductsPagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476ED298D9DCB004D9AA5 /* ProductsPagePresenterTests.swift */; };
 		3B4476F0298D9EAC004D9AA5 /* ProductItemPresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476EF298D9EAC004D9AA5 /* ProductItemPresentableTests.swift */; };
 		3B4476F2298D9F19004D9AA5 /* MainPagePresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476F1298D9F19004D9AA5 /* MainPagePresentableTests.swift */; };
+		3B4476F4298DA011004D9AA5 /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476F3298DA011004D9AA5 /* Composer.swift */; };
+		3B4476F6298DB5A2004D9AA5 /* AsLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476F5298DB5A2004D9AA5 /* AsLoading.swift */; };
+		3B4476F8298DB8F2004D9AA5 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476F7298DB8F2004D9AA5 /* Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		3B4476ED298D9DCB004D9AA5 /* ProductsPagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPagePresenterTests.swift; sourceTree = "<group>"; };
 		3B4476EF298D9EAC004D9AA5 /* ProductItemPresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemPresentableTests.swift; sourceTree = "<group>"; };
 		3B4476F1298D9F19004D9AA5 /* MainPagePresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresentableTests.swift; sourceTree = "<group>"; };
+		3B4476F3298DA011004D9AA5 /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
+		3B4476F5298DB5A2004D9AA5 /* AsLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsLoading.swift; sourceTree = "<group>"; };
+		3B4476F7298DB8F2004D9AA5 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,7 @@
 			children = (
 				3B4476A5298D928F004D9AA5 /* UI */,
 				3B44767A298D8FC3004D9AA5 /* CabifyShopApp.swift */,
+				3B4476F3298DA011004D9AA5 /* Composer.swift */,
 				3B44767E298D8FC4004D9AA5 /* Assets.xcassets */,
 				3B447680298D8FC4004D9AA5 /* CabifyShop.entitlements */,
 				3B447681298D8FC4004D9AA5 /* Preview Content */,
@@ -227,6 +234,7 @@
 				3B4476B8298D9555004D9AA5 /* ProductPromotionHint.swift */,
 				3B4476BC298D95EE004D9AA5 /* ProductPriceView.swift */,
 				3B4476BA298D956A004D9AA5 /* CabifyButton.swift */,
+				3B4476F7298DB8F2004D9AA5 /* Loading.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4476B4298D9506004D9AA5 /* AsCard.swift */,
+				3B4476F5298DB5A2004D9AA5 /* AsLoading.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -532,6 +541,7 @@
 				3B4476DC298D9AF9004D9AA5 /* LoadProductsResponse.swift in Sources */,
 				3B4476AF298D948C004D9AA5 /* ProductItemPresentable.swift in Sources */,
 				3B4476C8298D97F2004D9AA5 /* LoadProductsUseCase.swift in Sources */,
+				3B4476F4298DA011004D9AA5 /* Composer.swift in Sources */,
 				3B4476D9298D9AC3004D9AA5 /* ProductsRepositoryImpl.swift in Sources */,
 				3B4476E1298D9B53004D9AA5 /* ProductsApi.swift in Sources */,
 				3B4476C5298D979F004D9AA5 /* Product.swift in Sources */,
@@ -541,6 +551,7 @@
 				3B4476AD298D9433004D9AA5 /* ProductsPageView.swift in Sources */,
 				3B4476CD298D9832004D9AA5 /* ProductsRepository.swift in Sources */,
 				3B4476C1298D976F004D9AA5 /* ErrorPresentable.swift in Sources */,
+				3B4476F6298DB5A2004D9AA5 /* AsLoading.swift in Sources */,
 				3B4476BF298D9718004D9AA5 /* ProductsPagePresenter.swift in Sources */,
 				3B4476E3298D9B8D004D9AA5 /* ProductsApiImpl.swift in Sources */,
 				3B4476B5298D9506004D9AA5 /* AsCard.swift in Sources */,
@@ -549,6 +560,7 @@
 				3B4476B9298D9555004D9AA5 /* ProductPromotionHint.swift in Sources */,
 				3B4476B2298D94D0004D9AA5 /* ProductItemView.swift in Sources */,
 				3B4476AB298D9312004D9AA5 /* MainPagePresentable.swift in Sources */,
+				3B4476F8298DB8F2004D9AA5 /* Loading.swift in Sources */,
 				3B4476B7298D953F004D9AA5 /* ProductNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

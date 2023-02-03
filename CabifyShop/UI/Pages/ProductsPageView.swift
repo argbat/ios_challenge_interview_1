@@ -9,18 +9,23 @@ import SwiftUI
 
 /// Use this view to display a list of products page.
 struct ProductsPageView: View {
+    @ObservedObject var presenter: ProductsPagePresenter
+
     var body: some View {
         ProductsView(
-            products: [],
+            products: presenter.products,
+            loading: presenter.loading,
             onRefresh: {},
             onAddToCart: { _ in  }
         )
+        .onAppear { presenter.load() }
     }
 }
 
 /// Use this view to display a list of products.
 struct ProductsView: View {
     let products: [ProductItemPresentable]
+    let loading: Bool
     let onRefresh: () -> Void
     let onAddToCart: (ProductItemPresentable) -> Void
     
@@ -43,6 +48,9 @@ struct ProductsView: View {
             .refreshable {
                 onRefresh()
             }
+        }
+        .overlay {
+            LoadingView(show: loading)
         }
     }
 }
@@ -67,6 +75,14 @@ struct ProductsListView_Previews: PreviewProvider {
                                        showPromotion: false,
                                        price: "$5.00"),
             ],
+            loading: false,
+            onRefresh: {},
+            onAddToCart: { _ in }
+        )
+        
+        ProductsView(
+            products: [],
+            loading: true,
             onRefresh: {},
             onAddToCart: { _ in }
         )
