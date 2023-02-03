@@ -16,6 +16,14 @@
 		3B447699298D8FC5004D9AA5 /* CabifyShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447698298D8FC5004D9AA5 /* CabifyShopUITestsLaunchTests.swift */; };
 		3B4476A8298D92AD004D9AA5 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476A7298D92AD004D9AA5 /* MainPageView.swift */; };
 		3B4476AB298D9312004D9AA5 /* MainPagePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476AA298D9312004D9AA5 /* MainPagePresentable.swift */; };
+		3B4476AD298D9433004D9AA5 /* ProductsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476AC298D9433004D9AA5 /* ProductsPageView.swift */; };
+		3B4476AF298D948C004D9AA5 /* ProductItemPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476AE298D948C004D9AA5 /* ProductItemPresentable.swift */; };
+		3B4476B2298D94D0004D9AA5 /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476B1298D94D0004D9AA5 /* ProductItemView.swift */; };
+		3B4476B5298D9506004D9AA5 /* AsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476B4298D9506004D9AA5 /* AsCard.swift */; };
+		3B4476B7298D953F004D9AA5 /* ProductNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476B6298D953F004D9AA5 /* ProductNameView.swift */; };
+		3B4476B9298D9555004D9AA5 /* ProductPromotionHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476B8298D9555004D9AA5 /* ProductPromotionHint.swift */; };
+		3B4476BB298D956A004D9AA5 /* CabifyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476BA298D956A004D9AA5 /* CabifyButton.swift */; };
+		3B4476BD298D95EE004D9AA5 /* ProductPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476BC298D95EE004D9AA5 /* ProductPriceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		3B447698298D8FC5004D9AA5 /* CabifyShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3B4476A7298D92AD004D9AA5 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		3B4476AA298D9312004D9AA5 /* MainPagePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresentable.swift; sourceTree = "<group>"; };
+		3B4476AC298D9433004D9AA5 /* ProductsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPageView.swift; sourceTree = "<group>"; };
+		3B4476AE298D948C004D9AA5 /* ProductItemPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemPresentable.swift; sourceTree = "<group>"; };
+		3B4476B1298D94D0004D9AA5 /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
+		3B4476B4298D9506004D9AA5 /* AsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsCard.swift; sourceTree = "<group>"; };
+		3B4476B6298D953F004D9AA5 /* ProductNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNameView.swift; sourceTree = "<group>"; };
+		3B4476B8298D9555004D9AA5 /* ProductPromotionHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPromotionHint.swift; sourceTree = "<group>"; };
+		3B4476BA298D956A004D9AA5 /* CabifyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyButton.swift; sourceTree = "<group>"; };
+		3B4476BC298D95EE004D9AA5 /* ProductPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +153,9 @@
 		3B4476A5298D928F004D9AA5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3B4476B3298D94FD004D9AA5 /* Modifiers */,
 				3B4476A9298D92FB004D9AA5 /* Presentation */,
+				3B4476B0298D94C9004D9AA5 /* Views */,
 				3B4476A6298D9294004D9AA5 /* Pages */,
 			);
 			path = UI;
@@ -147,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4476A7298D92AD004D9AA5 /* MainPageView.swift */,
+				3B4476AC298D9433004D9AA5 /* ProductsPageView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -155,8 +174,29 @@
 			isa = PBXGroup;
 			children = (
 				3B4476AA298D9312004D9AA5 /* MainPagePresentable.swift */,
+				3B4476AE298D948C004D9AA5 /* ProductItemPresentable.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3B4476B0298D94C9004D9AA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B4476B1298D94D0004D9AA5 /* ProductItemView.swift */,
+				3B4476B6298D953F004D9AA5 /* ProductNameView.swift */,
+				3B4476B8298D9555004D9AA5 /* ProductPromotionHint.swift */,
+				3B4476BC298D95EE004D9AA5 /* ProductPriceView.swift */,
+				3B4476BA298D956A004D9AA5 /* CabifyButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B4476B3298D94FD004D9AA5 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3B4476B4298D9506004D9AA5 /* AsCard.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,10 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4476AF298D948C004D9AA5 /* ProductItemPresentable.swift in Sources */,
 				3B44767D298D8FC3004D9AA5 /* ContentView.swift in Sources */,
 				3B44767B298D8FC3004D9AA5 /* CabifyShopApp.swift in Sources */,
 				3B4476A8298D92AD004D9AA5 /* MainPageView.swift in Sources */,
+				3B4476BD298D95EE004D9AA5 /* ProductPriceView.swift in Sources */,
+				3B4476AD298D9433004D9AA5 /* ProductsPageView.swift in Sources */,
+				3B4476B5298D9506004D9AA5 /* AsCard.swift in Sources */,
+				3B4476BB298D956A004D9AA5 /* CabifyButton.swift in Sources */,
+				3B4476B9298D9555004D9AA5 /* ProductPromotionHint.swift in Sources */,
+				3B4476B2298D94D0004D9AA5 /* ProductItemView.swift in Sources */,
 				3B4476AB298D9312004D9AA5 /* MainPagePresentable.swift in Sources */,
+				3B4476B7298D953F004D9AA5 /* ProductNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
