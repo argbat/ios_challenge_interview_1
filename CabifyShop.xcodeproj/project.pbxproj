@@ -167,6 +167,8 @@
 		3B447679298D8FC3004D9AA5 /* CabifyShop */ = {
 			isa = PBXGroup;
 			children = (
+				3B4476D6298D9AA4004D9AA5 /* Services */,
+				3B4476C2298D978C004D9AA5 /* Domain */,
 				3B4476A5298D928F004D9AA5 /* UI */,
 				3B44767A298D8FC3004D9AA5 /* CabifyShopApp.swift */,
 				3B4476F3298DA011004D9AA5 /* Composer.swift */,
@@ -209,8 +211,6 @@
 		3B4476A5298D928F004D9AA5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3B4476D6298D9AA4004D9AA5 /* Services */,
-				3B4476C2298D978C004D9AA5 /* Domain */,
 				3B4476B3298D94FD004D9AA5 /* Modifiers */,
 				3B4476A9298D92FB004D9AA5 /* Presentation */,
 				3B4476B0298D94C9004D9AA5 /* Views */,
