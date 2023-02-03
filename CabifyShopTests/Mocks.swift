@@ -13,6 +13,7 @@ import Foundation
 //MARK: - Domain global instances
 let product1Code = ProductCode("Code1")
 let product2Code = ProductCode("Code2")
+let productWithOutPromotionCode = ProductCode("ProductWithOutPromotionCode")
 
 let product1 = Product(
     code: product1Code,
@@ -25,6 +26,45 @@ let product2 = Product(
     name: "Name2",
     price: Decimal(2)
 )
+
+let productWithOutPromotion = Product(
+    code: productWithOutPromotionCode,
+    name: "Name2",
+    price: Decimal(20)
+)
+
+let promotionProduct1Code = Promotion(
+    code: .discount,
+    productCodes: [product1Code],
+    description: "Discount"
+)
+
+let promotionProduct2Code = Promotion(
+    code: .twoForOne,
+    productCodes: [product2Code],
+    description: "2For1"
+)
+
+let promotionEmpty = Promotion(
+    code: .empty,
+    productCodes: [],
+    description: ""
+)
+
+// MARK: - Promotions Repositiry Mocks
+class EmptyPromotionsRepositoryMock: PromotionsRepository {
+    func load() -> [Promotion] {
+        []
+    }
+}
+
+class PromotionsRepositoryMock: PromotionsRepository {
+    private let repo: [Promotion] = [promotionProduct1Code, promotionProduct2Code]
+    
+    func load() -> [Promotion] {
+        repo
+    }
+}
 
 //MARK: - Products Repository Mocks
 

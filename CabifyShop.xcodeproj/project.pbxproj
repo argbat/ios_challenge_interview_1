@@ -43,6 +43,13 @@
 		3B4476F4298DA011004D9AA5 /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476F3298DA011004D9AA5 /* Composer.swift */; };
 		3B4476F6298DB5A2004D9AA5 /* AsLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476F5298DB5A2004D9AA5 /* AsLoading.swift */; };
 		3B4476F8298DB8F2004D9AA5 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476F7298DB8F2004D9AA5 /* Loading.swift */; };
+		3B4476FB298DBA67004D9AA5 /* PromotionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476FA298DBA67004D9AA5 /* PromotionsRepository.swift */; };
+		3B4476FD298DBA80004D9AA5 /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476FC298DBA80004D9AA5 /* Promotion.swift */; };
+		3B447700298DBAB2004D9AA5 /* PromotionsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4476FF298DBAB2004D9AA5 /* PromotionsRepositoryImpl.swift */; };
+		3B447703298DBADC004D9AA5 /* LoadPromotionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447702298DBADC004D9AA5 /* LoadPromotionsUseCase.swift */; };
+		3B447706298DBB97004D9AA5 /* PromotionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447705298DBB97004D9AA5 /* PromotionTests.swift */; };
+		3B447708298DBD80004D9AA5 /* PromotionsRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447707298DBD80004D9AA5 /* PromotionsRepositoryImplTests.swift */; };
+		3B44770A298DBE01004D9AA5 /* LoadPromotionsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447709298DBE01004D9AA5 /* LoadPromotionsUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +110,13 @@
 		3B4476F3298DA011004D9AA5 /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
 		3B4476F5298DB5A2004D9AA5 /* AsLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsLoading.swift; sourceTree = "<group>"; };
 		3B4476F7298DB8F2004D9AA5 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		3B4476FA298DBA67004D9AA5 /* PromotionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsRepository.swift; sourceTree = "<group>"; };
+		3B4476FC298DBA80004D9AA5 /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
+		3B4476FF298DBAB2004D9AA5 /* PromotionsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsRepositoryImpl.swift; sourceTree = "<group>"; };
+		3B447702298DBADC004D9AA5 /* LoadPromotionsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPromotionsUseCase.swift; sourceTree = "<group>"; };
+		3B447705298DBB97004D9AA5 /* PromotionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionTests.swift; sourceTree = "<group>"; };
+		3B447707298DBD80004D9AA5 /* PromotionsRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsRepositoryImplTests.swift; sourceTree = "<group>"; };
+		3B447709298DBE01004D9AA5 /* LoadPromotionsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPromotionsUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4476C4298D979F004D9AA5 /* Product.swift */,
+				3B4476FC298DBA80004D9AA5 /* Promotion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +284,7 @@
 		3B4476C6298D97E9004D9AA5 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				3B447701298DBAD3004D9AA5 /* Promotions */,
 				3B4476C9298D97FE004D9AA5 /* Products */,
 			);
 			path = UseCases;
@@ -285,6 +301,7 @@
 		3B4476CA298D9822004D9AA5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3B4476F9298DBA5E004D9AA5 /* Promotions */,
 				3B4476CB298D9827004D9AA5 /* Produtcs */,
 			);
 			path = Services;
@@ -301,6 +318,7 @@
 		3B4476CE298D9897004D9AA5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3B447704298DBB8A004D9AA5 /* Models */,
 				3B4476CF298D989D004D9AA5 /* UseCases */,
 			);
 			path = Domain;
@@ -310,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4476D0298D98AA004D9AA5 /* LoadProductsUseCaseTests.swift */,
+				3B447709298DBE01004D9AA5 /* LoadPromotionsUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -344,6 +363,7 @@
 		3B4476DD298D9B25004D9AA5 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				3B4476FE298DBAA3004D9AA5 /* Promotions */,
 				3B4476D7298D9AB4004D9AA5 /* Products */,
 			);
 			path = Repositories;
@@ -386,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4476E9298D9C4D004D9AA5 /* ProductsRepositoryImplTests.swift */,
+				3B447707298DBD80004D9AA5 /* PromotionsRepositoryImplTests.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -406,6 +427,38 @@
 				3B4476EB298D9DA5004D9AA5 /* Presenter */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		3B4476F9298DBA5E004D9AA5 /* Promotions */ = {
+			isa = PBXGroup;
+			children = (
+				3B4476FA298DBA67004D9AA5 /* PromotionsRepository.swift */,
+			);
+			path = Promotions;
+			sourceTree = "<group>";
+		};
+		3B4476FE298DBAA3004D9AA5 /* Promotions */ = {
+			isa = PBXGroup;
+			children = (
+				3B4476FF298DBAB2004D9AA5 /* PromotionsRepositoryImpl.swift */,
+			);
+			path = Promotions;
+			sourceTree = "<group>";
+		};
+		3B447701298DBAD3004D9AA5 /* Promotions */ = {
+			isa = PBXGroup;
+			children = (
+				3B447702298DBADC004D9AA5 /* LoadPromotionsUseCase.swift */,
+			);
+			path = Promotions;
+			sourceTree = "<group>";
+		};
+		3B447704298DBB8A004D9AA5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B447705298DBB97004D9AA5 /* PromotionTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,14 +594,17 @@
 				3B4476DC298D9AF9004D9AA5 /* LoadProductsResponse.swift in Sources */,
 				3B4476AF298D948C004D9AA5 /* ProductItemPresentable.swift in Sources */,
 				3B4476C8298D97F2004D9AA5 /* LoadProductsUseCase.swift in Sources */,
+				3B447700298DBAB2004D9AA5 /* PromotionsRepositoryImpl.swift in Sources */,
 				3B4476F4298DA011004D9AA5 /* Composer.swift in Sources */,
 				3B4476D9298D9AC3004D9AA5 /* ProductsRepositoryImpl.swift in Sources */,
 				3B4476E1298D9B53004D9AA5 /* ProductsApi.swift in Sources */,
 				3B4476C5298D979F004D9AA5 /* Product.swift in Sources */,
 				3B44767B298D8FC3004D9AA5 /* CabifyShopApp.swift in Sources */,
+				3B447703298DBADC004D9AA5 /* LoadPromotionsUseCase.swift in Sources */,
 				3B4476A8298D92AD004D9AA5 /* MainPageView.swift in Sources */,
 				3B4476BD298D95EE004D9AA5 /* ProductPriceView.swift in Sources */,
 				3B4476AD298D9433004D9AA5 /* ProductsPageView.swift in Sources */,
+				3B4476FD298DBA80004D9AA5 /* Promotion.swift in Sources */,
 				3B4476CD298D9832004D9AA5 /* ProductsRepository.swift in Sources */,
 				3B4476C1298D976F004D9AA5 /* ErrorPresentable.swift in Sources */,
 				3B4476F6298DB5A2004D9AA5 /* AsLoading.swift in Sources */,
@@ -557,6 +613,7 @@
 				3B4476B5298D9506004D9AA5 /* AsCard.swift in Sources */,
 				3B4476D5298D9A13004D9AA5 /* Formatters.swift in Sources */,
 				3B4476BB298D956A004D9AA5 /* CabifyButton.swift in Sources */,
+				3B4476FB298DBA67004D9AA5 /* PromotionsRepository.swift in Sources */,
 				3B4476B9298D9555004D9AA5 /* ProductPromotionHint.swift in Sources */,
 				3B4476B2298D94D0004D9AA5 /* ProductItemView.swift in Sources */,
 				3B4476AB298D9312004D9AA5 /* MainPagePresentable.swift in Sources */,
@@ -573,8 +630,11 @@
 				3B4476D1298D98AA004D9AA5 /* LoadProductsUseCaseTests.swift in Sources */,
 				3B4476EE298D9DCB004D9AA5 /* ProductsPagePresenterTests.swift in Sources */,
 				3B4476F2298D9F19004D9AA5 /* MainPagePresentableTests.swift in Sources */,
+				3B447706298DBB97004D9AA5 /* PromotionTests.swift in Sources */,
 				3B4476D3298D991F004D9AA5 /* Mocks.swift in Sources */,
 				3B4476E7298D9C01004D9AA5 /* ProductsApiIntegrationTests.swift in Sources */,
+				3B44770A298DBE01004D9AA5 /* LoadPromotionsUseCaseTests.swift in Sources */,
+				3B447708298DBD80004D9AA5 /* PromotionsRepositoryImplTests.swift in Sources */,
 				3B4476EA298D9C4E004D9AA5 /* ProductsRepositoryImplTests.swift in Sources */,
 				3B4476F0298D9EAC004D9AA5 /* ProductItemPresentableTests.swift in Sources */,
 			);

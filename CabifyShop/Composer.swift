@@ -17,6 +17,7 @@ struct Composer {
     static let productsRepo: ProductsRepository = ProductsRepositoryImpl(
         api: Composer.productsApi
     )
+    static let promotionsRepo: PromotionsRepository = PromotionsRepositoryImpl()
 
 // MARK: - Use Cases
     
@@ -26,10 +27,17 @@ struct Composer {
         )
     }
     
+    func makeLoadPromotionsUseCase() -> LoadPromotionsUseCase {
+        LoadPromotionsUseCase(
+            promotionsRepository: Composer.promotionsRepo
+        )
+    }
+    
 // MARK: - Presenters
     func makeProductsPagePresenter() -> ProductsPagePresenter {
         ProductsPagePresenter(
-            loadProductsUseCase: makeLoadProductsUseCase()
+            loadProductsUseCase: makeLoadProductsUseCase(),
+            loadPromotionsUseCase: makeLoadPromotionsUseCase()
         )
     }
 }

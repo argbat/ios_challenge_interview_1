@@ -16,8 +16,11 @@ class ProductsPagePresenterTests: XCTestCase {
         let loadProductsUseCase = LoadProductsUseCase(
             productsRepository: productsRepo
         )
+        let promoRepo = PromotionsRepositoryMock()
+        let loadPromotionsUseCase = LoadPromotionsUseCase(promotionsRepository: promoRepo)
         let sut = ProductsPagePresenter(
-            loadProductsUseCase: loadProductsUseCase
+            loadProductsUseCase: loadProductsUseCase,
+            loadPromotionsUseCase: loadPromotionsUseCase
         )
         
         sut.load()
@@ -38,8 +41,11 @@ class ProductsPagePresenterTests: XCTestCase {
         let loadProductsUseCase = LoadProductsUseCase(
             productsRepository: productsRepo
         )
+        let promoRepo = PromotionsRepositoryMock()
+        let loadPromotionsUseCase = LoadPromotionsUseCase(promotionsRepository: promoRepo)
         let sut = ProductsPagePresenter(
-            loadProductsUseCase: loadProductsUseCase
+            loadProductsUseCase: loadProductsUseCase,
+            loadPromotionsUseCase: loadPromotionsUseCase
         )
         
         sut.load()
@@ -59,8 +65,11 @@ class ProductsPagePresenterTests: XCTestCase {
         let loadProductsUseCase = LoadProductsUseCase(
             productsRepository: productsRepo
         )
+        let promoRepo = PromotionsRepositoryMock()
+        let loadPromotionsUseCase = LoadPromotionsUseCase(promotionsRepository: promoRepo)
         let sut = ProductsPagePresenter(
-            loadProductsUseCase: loadProductsUseCase
+            loadProductsUseCase: loadProductsUseCase,
+            loadPromotionsUseCase: loadPromotionsUseCase
         )
         
         sut.load()

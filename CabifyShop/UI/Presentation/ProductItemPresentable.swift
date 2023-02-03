@@ -20,17 +20,20 @@ struct ProductItemPresentable: Identifiable {
     /// Maps a product to a view repesentable card.
     ///
     /// - Returns an instance of representable or nil if mapping fails.
-    static func map(product: Product) -> ProductItemPresentable? {
+    static func map(product: Product, promotions: [Promotion]?) -> ProductItemPresentable? {
         let priceFormatter = NumberFormatter()
         
         guard let formattedPrice = priceFormatter.priceFormatter(price: product.price) else {
             return nil
         }
         
+        let promotion = promotions?.first { $0.isForProductCode(code: product.code) }
+        let promoDesc = promotion?.description ?? ""
+        
         return ProductItemPresentable(code: product.code,
                                       name: product.name,
-                                      promotion: "",
-                                      showPromotion: false,
+                                      promotion: promoDesc,
+                                      showPromotion: !promoDesc.isEmpty,
                                       price: formattedPrice)
     }
 }
