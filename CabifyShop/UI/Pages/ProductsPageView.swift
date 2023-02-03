@@ -2,14 +2,7 @@
 //  ProductsPageView.swift
 //  CabifyShop
 //
-//  Created by Demian Odasso on 03/02/2023.
-//
-
-//
-//  ProductsListPageView.swift
-//  CabifyShop
-//
-//  Created by Demian Odasso on 29/01/2023.
+//  Created by Demian Odasso on 30/01/2023.
 //
 
 import SwiftUI
