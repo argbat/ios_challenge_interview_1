@@ -19,7 +19,8 @@ struct Composer {
     )
     static let promotionsRepo: PromotionsRepository = PromotionsRepositoryImpl()
     static let cartRepo: CartRepository = CartRepositoryImpl()
-    
+    static let promotionStrategiesRepo: PromotionStrategiesRepository = PromotionStrategiesRepositoryImpl()
+
 // MARK: - Use Cases
     func makeLoadProductsUseCase() -> LoadProductsUseCase {
         LoadProductsUseCase(
@@ -55,6 +56,14 @@ struct Composer {
         RemoveProductFromCartUseCase(cartRepository: Composer.cartRepo)
     }
     
+    func makeCartCalculatorUseCase() -> CartCalculatorUseCase {
+        CartCalculatorUseCase(
+            cartRepository: Composer.cartRepo,
+            promotionsRepository: Composer.promotionsRepo,
+            promotionStrategiesRepository: Composer.promotionStrategiesRepo
+        )
+    }
+    
 // MARK: - Presenters
     func makeMainPagePresenter() -> MainPagePresenter {
         MainPagePresenter(cartCounterObserveUseCase: makeCartCounterObserveUseCase())
@@ -73,7 +82,8 @@ struct Composer {
             loadCartUseCase: makeLoadCartUseCase(),
             loadPromotionsUseCase: makeLoadPromotionsUseCase(),
             cartObserveUseCase: makeCartObserveUseCase(),
-            removeProductFromCartUseCase: makeRemoveProductFromCartUseCase()
+            removeProductFromCartUseCase: makeRemoveProductFromCartUseCase(),
+            cartCalculatorUseCase: makeCartCalculatorUseCase()
         )
     }
 }

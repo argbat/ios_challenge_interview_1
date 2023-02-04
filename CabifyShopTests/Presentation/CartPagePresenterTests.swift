@@ -13,16 +13,24 @@ import Combine
 final class CartPagePresenterTests: XCTestCase {
     func test_load_emptyCart_showsEmpty() throws {
         let cartRepo = CartRepositoryMock()
+        let promosRepo = PromotionsRepositoryMock()
+        let strategiesRepo = PromotionStrategiesRepositoryMock()
+
         let loadCartUseCase = LoadCartUseCase(cartRepository: cartRepo)
         let cartObserveUseCase = CartObserveUseCase(cartRepository: cartRepo)
-        let promosRepo = PromotionsRepositoryMock()
         let loadPromotionsUseCase = LoadPromotionsUseCase(
             promotionsRepository: promosRepo)
         let removeProductFromCartUseCase = RemoveProductFromCartUseCase(cartRepository: cartRepo)
+        let cartCalculatorUseCase = CartCalculatorUseCase(
+            cartRepository: cartRepo,
+            promotionsRepository: promosRepo,
+            promotionStrategiesRepository: strategiesRepo)
+
         let sut = CartPagePresenter(loadCartUseCase: loadCartUseCase,
                                     loadPromotionsUseCase: loadPromotionsUseCase,
                                     cartObserveUseCase: cartObserveUseCase,
-                                    removeProductFromCartUseCase: removeProductFromCartUseCase)
+                                    removeProductFromCartUseCase: removeProductFromCartUseCase,
+                                    cartCalculatorUseCase: cartCalculatorUseCase)
         
         sut.load()
         
@@ -39,16 +47,25 @@ final class CartPagePresenterTests: XCTestCase {
     
     func test_load_notEmptyCart_showNotEmpty() throws {
         let cartRepo = CartRepositoryMock()
+        let promosRepo = PromotionsRepositoryMock()
+        let strategiesRepo = PromotionStrategiesRepositoryMock()
+        
         let loadCartUseCase = LoadCartUseCase(cartRepository: cartRepo)
         let cartObserveUseCase = CartObserveUseCase(cartRepository: cartRepo)
-        let promosRepo = PromotionsRepositoryMock()
         let loadPromotionsUseCase = LoadPromotionsUseCase(
             promotionsRepository: promosRepo)
         let removeProductFromCartUseCase = RemoveProductFromCartUseCase(cartRepository: cartRepo)
+        let cartCalculatorUseCase = CartCalculatorUseCase(
+            cartRepository: cartRepo,
+            promotionsRepository: promosRepo,
+            promotionStrategiesRepository: strategiesRepo)
+
+        
         let sut = CartPagePresenter(loadCartUseCase: loadCartUseCase,
                                     loadPromotionsUseCase: loadPromotionsUseCase,
                                     cartObserveUseCase: cartObserveUseCase,
-                                    removeProductFromCartUseCase: removeProductFromCartUseCase)
+                                    removeProductFromCartUseCase: removeProductFromCartUseCase,
+                                    cartCalculatorUseCase: cartCalculatorUseCase)
 
         cartRepo.save(updatedCart: [product1])
         
@@ -67,16 +84,24 @@ final class CartPagePresenterTests: XCTestCase {
     
     func test_load_notEmptyCart_showsItemsInReverseOrder() throws {
         let cartRepo = CartRepositoryMock()
+        let promosRepo = PromotionsRepositoryMock()
+        let strategiesRepo = PromotionStrategiesRepositoryMock()
+        
         let loadCartUseCase = LoadCartUseCase(cartRepository: cartRepo)
         let cartObserveUseCase = CartObserveUseCase(cartRepository: cartRepo)
-        let promosRepo = PromotionsRepositoryMock()
         let loadPromotionsUseCase = LoadPromotionsUseCase(
             promotionsRepository: promosRepo)
         let removeProductFromCartUseCase = RemoveProductFromCartUseCase(cartRepository: cartRepo)
+        let cartCalculatorUseCase = CartCalculatorUseCase(
+            cartRepository: cartRepo,
+            promotionsRepository: promosRepo,
+            promotionStrategiesRepository: strategiesRepo)
+
         let sut = CartPagePresenter(loadCartUseCase: loadCartUseCase,
                                     loadPromotionsUseCase: loadPromotionsUseCase,
                                     cartObserveUseCase: cartObserveUseCase,
-                                    removeProductFromCartUseCase: removeProductFromCartUseCase)
+                                    removeProductFromCartUseCase: removeProductFromCartUseCase,
+                                    cartCalculatorUseCase: cartCalculatorUseCase)
 
         cartRepo.save(updatedCart: [product1, product2])
         
@@ -94,16 +119,24 @@ final class CartPagePresenterTests: XCTestCase {
     
     func test_remove_existingProductInCart_remmovesIt() throws {
         let cartRepo = CartRepositoryMock()
+        let promosRepo = PromotionsRepositoryMock()
+        let strategiesRepo = PromotionStrategiesRepositoryMock()
+        
         let loadCartUseCase = LoadCartUseCase(cartRepository: cartRepo)
         let cartObserveUseCase = CartObserveUseCase(cartRepository: cartRepo)
         let removeProductFromCartUseCase = RemoveProductFromCartUseCase(cartRepository: cartRepo)
-        let promosRepo = PromotionsRepositoryMock()
         let loadPromotionsUseCase = LoadPromotionsUseCase(
             promotionsRepository: promosRepo)
+        let cartCalculatorUseCase = CartCalculatorUseCase(
+            cartRepository: cartRepo,
+            promotionsRepository: promosRepo,
+            promotionStrategiesRepository: strategiesRepo)
+
         let sut = CartPagePresenter(loadCartUseCase: loadCartUseCase,
                                     loadPromotionsUseCase: loadPromotionsUseCase,
                                     cartObserveUseCase: cartObserveUseCase,
-                                    removeProductFromCartUseCase: removeProductFromCartUseCase)
+                                    removeProductFromCartUseCase: removeProductFromCartUseCase,
+                                    cartCalculatorUseCase: cartCalculatorUseCase)
         
         cartRepo.save(updatedCart: [product1])
         sut.load()
@@ -131,16 +164,24 @@ final class CartPagePresenterTests: XCTestCase {
 
     func test_remove_notExistingProductInCart_doesNothing() throws {
         let cartRepo = CartRepositoryMock()
+        let promosRepo = PromotionsRepositoryMock()
+        let strategiesRepo = PromotionStrategiesRepositoryMock()
+        
         let loadCartUseCase = LoadCartUseCase(cartRepository: cartRepo)
         let cartObserveUseCase = CartObserveUseCase(cartRepository: cartRepo)
         let removeProductFromCartUseCase = RemoveProductFromCartUseCase(cartRepository: cartRepo)
-        let promosRepo = PromotionsRepositoryMock()
         let loadPromotionsUseCase = LoadPromotionsUseCase(
             promotionsRepository: promosRepo)
+        let cartCalculatorUseCase = CartCalculatorUseCase(
+            cartRepository: cartRepo,
+            promotionsRepository: promosRepo,
+            promotionStrategiesRepository: strategiesRepo)
+
         let sut = CartPagePresenter(loadCartUseCase: loadCartUseCase,
                                     loadPromotionsUseCase: loadPromotionsUseCase,
                                     cartObserveUseCase: cartObserveUseCase,
-                                    removeProductFromCartUseCase: removeProductFromCartUseCase)
+                                    removeProductFromCartUseCase: removeProductFromCartUseCase,
+                                    cartCalculatorUseCase: cartCalculatorUseCase)
         
         cartRepo.save(updatedCart: [product1])
         sut.load()
@@ -163,5 +204,46 @@ final class CartPagePresenterTests: XCTestCase {
         }
         waitForExpectations(timeout: 0.1)
         cancellable.cancel()
+    }
+    
+    func test_error_gotCalculationError() throws {
+        let cartRepo = CartRepositoryMock()
+        let promosRepo = PromotionsRepositoryMock()
+        let strategiesRepo = PromotionStrategiesRepositoryMock()
+
+        let loadCartUseCase = LoadCartUseCase(cartRepository: cartRepo)
+        let cartObserveUseCase = CartObserveUseCase(cartRepository: cartRepo)
+        let removeProductFromCartUseCase = RemoveProductFromCartUseCase(cartRepository: cartRepo)
+        let loadPromotionsUseCase = LoadPromotionsUseCase(
+            promotionsRepository: promosRepo)
+        let cartCalculatorUseCase = ErrorCartCalculatorUseCase(
+            cartRepository: cartRepo,
+            promotionsRepository: promosRepo,
+            promotionStrategiesRepository: strategiesRepo)
+
+        let sut = CartPagePresenter(loadCartUseCase: loadCartUseCase,
+                                    loadPromotionsUseCase: loadPromotionsUseCase,
+                                    cartObserveUseCase: cartObserveUseCase,
+                                    removeProductFromCartUseCase: removeProductFromCartUseCase,
+                                    cartCalculatorUseCase: cartCalculatorUseCase)
+        cartRepo.save(updatedCart: [product1])
+        sut.load()
+        
+        let exp = expectation(description: "wait for error")
+        let cancellable = sut.$error.sink { error in
+            XCTAssertEqual(error.title, "Cabify")
+            XCTAssertEqual(error.message, "No checkout is available at this time.")
+            exp.fulfill()
+        }
+        waitForExpectations(timeout: 0.1)
+        cancellable.cancel()
+    }
+}
+
+// MARK: - Helpers
+
+class ErrorCartCalculatorUseCase: CartCalculatorUseCase {
+    override func execute() -> CartCalculatorResult? {
+        nil
     }
 }

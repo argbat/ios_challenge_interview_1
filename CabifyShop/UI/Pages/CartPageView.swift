@@ -14,14 +14,10 @@ struct CartPageView: View {
     var body: some View {
         CartView(
             cart: cartPresenter.cart,
-            checkout: CheckoutPresentable(
-                subtotal: "$30.00",
-                showDiscounts: true,
-                discounts: "$5.00",
-                youWillPay: "$25.00"
-            ),
+            checkout: cartPresenter.checkout,
             onRemove: { product in cartPresenter.removeProduct(product: product) }
         )
+        .onAppear { cartPresenter.load() }
     }
 }
 
