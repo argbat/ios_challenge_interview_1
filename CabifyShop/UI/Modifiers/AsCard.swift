@@ -9,11 +9,11 @@ import SwiftUI
 
 /// Style a view as a card with rounded corners and a elevation using a shadow.
 struct AsCard: ViewModifier {
-    let backgroundColor: Color
+    @Environment(\.colorScheme) var colorScheme
 
     func body(content: Content) -> some View {
         content
-            .background { backgroundColor }
+            .background { colorScheme == .light ? Color.white : Color.black }
             .cornerRadius(14)
             .shadow(radius: 4)
     }

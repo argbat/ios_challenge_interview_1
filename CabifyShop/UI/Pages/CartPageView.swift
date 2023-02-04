@@ -42,7 +42,7 @@ struct CartView: View {
                 )
                 .padding()
                 .listRowSeparator(.hidden)
-                .modifier(AsCard(backgroundColor: Color.white))
+                .modifier(AsCard())
                 .modifier(AsNotHlighlightedCell())
             }
             .listStyle(.plain)
@@ -61,7 +61,7 @@ struct CartView: View {
             VStack {
                 CartCheckoutView(checkout: checkout)
                     .padding()
-                    .modifier(AsCard(backgroundColor: .white))
+                    .modifier(AsCard())
             }
             .padding()
         }
