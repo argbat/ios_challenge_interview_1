@@ -18,12 +18,15 @@ class ProductsPagePresenter: ObservableObject {
     
     private let loadProductsUseCase: LoadProductsUseCase
     private let loadPromotionsUseCase: LoadPromotionsUseCase
+    private let addProductToCartUseCase: AddProductToCartUseCase
     private var cancellables: Set<AnyCancellable> = []
     
     init(loadProductsUseCase: LoadProductsUseCase,
-         loadPromotionsUseCase: LoadPromotionsUseCase) {
+         loadPromotionsUseCase: LoadPromotionsUseCase,
+         addProductToCartUseCase: AddProductToCartUseCase) {
         self.loadProductsUseCase = loadProductsUseCase
         self.loadPromotionsUseCase = loadPromotionsUseCase
+        self.addProductToCartUseCase = addProductToCartUseCase
     }
     
     func load() {
@@ -50,5 +53,15 @@ class ProductsPagePresenter: ObservableObject {
             self?.domainProducts.removeAll()
             self?.domainProducts.append(contentsOf: domianProducts)
         }.store(in: &cancellables)
+    }
+    
+    func addToCart(product: ProductItemPresentable) {
+        let product = domainProducts.first {
+            product.represents(product: $0)
+        }
+        guard let product = product else {
+            return
+        }
+        addProductToCartUseCase.execute(product: product)
     }
 }

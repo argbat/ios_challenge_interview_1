@@ -18,9 +18,9 @@ struct Composer {
         api: Composer.productsApi
     )
     static let promotionsRepo: PromotionsRepository = PromotionsRepositoryImpl()
-
-// MARK: - Use Cases
+    static let cartRepo: CartRepository = CartRepositoryImpl()
     
+// MARK: - Use Cases
     func makeLoadProductsUseCase() -> LoadProductsUseCase {
         LoadProductsUseCase(
             productsRepository: Composer.productsRepo
@@ -33,11 +33,47 @@ struct Composer {
         )
     }
     
+    func makeLoadCartUseCase() -> LoadCartUseCase {
+        LoadCartUseCase(cartRepository: Composer.cartRepo)
+    }
+    
+    func makeCartObserveUseCase() -> CartObserveUseCase {
+        CartObserveUseCase(
+            cartRepository: Composer.cartRepo
+        )
+    }
+    
+    func makeAddProductToCartUseCase() -> AddProductToCartUseCase {
+        AddProductToCartUseCase(cartRepository: Composer.cartRepo)
+    }
+    
+    func makeCartCounterObserveUseCase() -> CartCounterObserveUseCase {
+        CartCounterObserveUseCase(cartRepository: Composer.cartRepo)
+    }
+    
+    func makeRemoveProductFromCartUseCase() -> RemoveProductFromCartUseCase {
+        RemoveProductFromCartUseCase(cartRepository: Composer.cartRepo)
+    }
+    
 // MARK: - Presenters
+    func makeMainPagePresenter() -> MainPagePresenter {
+        MainPagePresenter(cartCounterObserveUseCase: makeCartCounterObserveUseCase())
+    }
+
     func makeProductsPagePresenter() -> ProductsPagePresenter {
         ProductsPagePresenter(
             loadProductsUseCase: makeLoadProductsUseCase(),
-            loadPromotionsUseCase: makeLoadPromotionsUseCase()
+            loadPromotionsUseCase: makeLoadPromotionsUseCase(),
+            addProductToCartUseCase: makeAddProductToCartUseCase()
+        )
+    }
+    
+    func makeCartPagePresenter() -> CartPagePresenter {
+        CartPagePresenter(
+            loadCartUseCase: makeLoadCartUseCase(),
+            loadPromotionsUseCase: makeLoadPromotionsUseCase(),
+            cartObserveUseCase: makeCartObserveUseCase(),
+            removeProductFromCartUseCase: makeRemoveProductFromCartUseCase()
         )
     }
 }

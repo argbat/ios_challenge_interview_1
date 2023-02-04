@@ -10,6 +10,26 @@ import XCTest
 @testable import CabifyShop
 
 final class ProductItemPresentableTests: XCTestCase {
+    func test_represents_true() throws {
+        let sut = ProductItemPresentable.map(
+            product: product1,
+            promotions: [promotionProduct1Code, promotionProduct2Code]
+        )
+        
+        let unwrappedSut = try XCTUnwrap(sut)
+        XCTAssertEqual(unwrappedSut.represents(product: product1), true)
+    }
+    
+    func test_represents_false() throws {
+        let sut = ProductItemPresentable.map(
+            product: product1,
+            promotions: [promotionProduct1Code, promotionProduct2Code]
+        )
+        
+        let unwrappedSut = try XCTUnwrap(sut)
+        XCTAssertEqual(unwrappedSut.represents(product: product2), false)
+    }
+    
     func test_map() throws {
         let sut = ProductItemPresentable.map(
             product: product1,

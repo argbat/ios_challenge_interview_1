@@ -16,7 +16,7 @@ struct ProductsPageView: View {
             products: presenter.products,
             loading: presenter.loading,
             onRefresh: {},
-            onAddToCart: { _ in  }
+            onAddToCart: { product in presenter.addToCart(product: product) }
         )
         .onAppear { presenter.load() }
     }

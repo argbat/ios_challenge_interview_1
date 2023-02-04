@@ -16,7 +16,6 @@ struct ProductItemPresentable: Identifiable {
     let showPromotion: Bool
     let price: String
     
-    
     /// Maps a product to a view repesentable card.
     ///
     /// - Returns an instance of representable or nil if mapping fails.
@@ -35,5 +34,9 @@ struct ProductItemPresentable: Identifiable {
                                       promotion: promoDesc,
                                       showPromotion: !promoDesc.isEmpty,
                                       price: formattedPrice)
+    }
+    
+    func represents(product: Product) -> Bool {
+        return code == product.code
     }
 }

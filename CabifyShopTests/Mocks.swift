@@ -51,6 +51,26 @@ let promotionEmpty = Promotion(
     description: ""
 )
 
+//MARK: - Cart Repository Mocks
+class CartRepositoryMock: CartRepository {
+    var didSave: AnyPublisher<[Product], Never> {
+        subject.eraseToAnyPublisher()
+    }
+    
+    private(set) var cart: [Product] = []
+    private let subject = CurrentValueSubject<[Product], Never>([])
+
+    func load() -> [Product] {
+        cart
+    }
+    
+    func save(updatedCart: [CabifyShop.Product]) {
+        cart.removeAll()
+        cart.append(contentsOf: updatedCart)
+        subject.send(cart)
+    }
+}
+
 // MARK: - Promotions Repositiry Mocks
 class EmptyPromotionsRepositoryMock: PromotionsRepository {
     func load() -> [Promotion] {

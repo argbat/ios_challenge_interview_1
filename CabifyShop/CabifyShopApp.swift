@@ -14,7 +14,9 @@ struct CabifyShopApp: App {
     var body: some Scene {
         WindowGroup {
             MainPageView(
-                productsPresenter: composer.makeProductsPagePresenter()
+                presenter: composer.makeMainPagePresenter(),
+                productsPresenter: composer.makeProductsPagePresenter(),
+                cartPresenter: composer.makeCartPagePresenter()
             )
         }
     }
