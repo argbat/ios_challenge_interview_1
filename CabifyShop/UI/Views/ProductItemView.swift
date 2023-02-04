@@ -34,7 +34,7 @@ struct ProductItemView: View {
                 }
             }.padding()
         }
-        .modifier(AsCard(backgroundColor: Color.white))
+        .modifier(AsCard())
     }
 }
 
