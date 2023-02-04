@@ -213,6 +213,7 @@
 			children = (
 				3B4476D6298D9AA4004D9AA5 /* Services */,
 				3B4476C2298D978C004D9AA5 /* Domain */,
+				3B4476A9298D92FB004D9AA5 /* Presentation */,
 				3B4476A5298D928F004D9AA5 /* UI */,
 				3B44767A298D8FC3004D9AA5 /* CabifyShopApp.swift */,
 				3B4476F3298DA011004D9AA5 /* Composer.swift */,
@@ -234,7 +235,7 @@
 		3B44768B298D8FC5004D9AA5 /* CabifyShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B4476EC298D9DB5004D9AA5 /* UI */,
+				3B4476EB298D9DA5004D9AA5 /* Presentation */,
 				3B4476E4298D9BE9004D9AA5 /* Services */,
 				3B4476CE298D9897004D9AA5 /* Domain */,
 				3B44768C298D8FC5004D9AA5 /* CabifyShopTests.swift */,
@@ -256,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				3B4476B3298D94FD004D9AA5 /* Modifiers */,
-				3B4476A9298D92FB004D9AA5 /* Presentation */,
 				3B4476B0298D94C9004D9AA5 /* Views */,
 				3B4476A6298D9294004D9AA5 /* Pages */,
 			);
@@ -480,14 +480,6 @@
 				3B44771B298DD194004D9AA5 /* CartPresentableTests.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		3B4476EC298D9DB5004D9AA5 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				3B4476EB298D9DA5004D9AA5 /* Presentation */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		3B4476F9298DBA5E004D9AA5 /* Promotions */ = {
