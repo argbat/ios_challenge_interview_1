@@ -51,6 +51,10 @@ struct Composer {
         CartCounterObserveUseCase(cartRepository: Composer.cartRepo)
     }
     
+    func makeRemoveProductFromCartUseCase() -> RemoveProductFromCartUseCase {
+        RemoveProductFromCartUseCase(cartRepository: Composer.cartRepo)
+    }
+    
 // MARK: - Presenters
     func makeMainPagePresenter() -> MainPagePresenter {
         MainPagePresenter(cartCounterObserveUseCase: makeCartCounterObserveUseCase())
@@ -68,7 +72,8 @@ struct Composer {
         CartPagePresenter(
             loadCartUseCase: makeLoadCartUseCase(),
             loadPromotionsUseCase: makeLoadPromotionsUseCase(),
-            cartObserveUseCase: makeCartObserveUseCase()
+            cartObserveUseCase: makeCartObserveUseCase(),
+            removeProductFromCartUseCase: makeRemoveProductFromCartUseCase()
         )
     }
 }

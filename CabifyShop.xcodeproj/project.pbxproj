@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4253EB298DE46000DBB09C /* CartRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253EA298DE46000DBB09C /* CartRepositoryImplTests.swift */; };
+		3B4253ED298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253EC298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift */; };
+		3B4253EF298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253EE298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift */; };
 		3B44767B298D8FC3004D9AA5 /* CabifyShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44767A298D8FC3004D9AA5 /* CabifyShopApp.swift */; };
 		3B44767F298D8FC4004D9AA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B44767E298D8FC4004D9AA5 /* Assets.xcassets */; };
 		3B447683298D8FC4004D9AA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B447682298D8FC4004D9AA5 /* Preview Assets.xcassets */; };
@@ -92,6 +95,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B4253EA298DE46000DBB09C /* CartRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRepositoryImplTests.swift; sourceTree = "<group>"; };
+		3B4253EC298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductFromCartUseCase.swift; sourceTree = "<group>"; };
+		3B4253EE298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductFromCartUseCaseTests.swift; sourceTree = "<group>"; };
 		3B447677298D8FC3004D9AA5 /* CabifyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabifyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B44767A298D8FC3004D9AA5 /* CabifyShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyShopApp.swift; sourceTree = "<group>"; };
 		3B44767E298D8FC4004D9AA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -464,6 +470,7 @@
 			children = (
 				3B4476E9298D9C4D004D9AA5 /* ProductsRepositoryImplTests.swift */,
 				3B447707298DBD80004D9AA5 /* PromotionsRepositoryImplTests.swift */,
+				3B4253EA298DE46000DBB09C /* CartRepositoryImplTests.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -521,6 +528,7 @@
 				3B44772B298DD683004D9AA5 /* CartObserveUseCase.swift */,
 				3B447738298DDAF3004D9AA5 /* AddProductToCartUseCase.swift */,
 				3B44773E298DDEBC004D9AA5 /* CartCounterObserveUseCase.swift */,
+				3B4253EC298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -563,6 +571,7 @@
 				3B44772D298DD6F0004D9AA5 /* CartObserveUseCaseTests.swift */,
 				3B447732298DD758004D9AA5 /* LoadCartUseCaseTests.swift */,
 				3B447736298DDADA004D9AA5 /* AddToCartUseCaseTests.swift */,
+				3B4253EE298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -706,6 +715,7 @@
 				3B447700298DBAB2004D9AA5 /* PromotionsRepositoryImpl.swift in Sources */,
 				3B4476F4298DA011004D9AA5 /* Composer.swift in Sources */,
 				3B4476D9298D9AC3004D9AA5 /* ProductsRepositoryImpl.swift in Sources */,
+				3B4253ED298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift in Sources */,
 				3B4476E1298D9B53004D9AA5 /* ProductsApi.swift in Sources */,
 				3B44770C298DCE9E004D9AA5 /* CartPageView.swift in Sources */,
 				3B4476C5298D979F004D9AA5 /* Product.swift in Sources */,
@@ -756,7 +766,9 @@
 				3B4476F2298D9F19004D9AA5 /* MainPagePresentableTests.swift in Sources */,
 				3B447706298DBB97004D9AA5 /* PromotionTests.swift in Sources */,
 				3B4476D3298D991F004D9AA5 /* Mocks.swift in Sources */,
+				3B4253EB298DE46000DBB09C /* CartRepositoryImplTests.swift in Sources */,
 				3B4476E7298D9C01004D9AA5 /* ProductsApiIntegrationTests.swift in Sources */,
+				3B4253EF298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift in Sources */,
 				3B447735298DD79B004D9AA5 /* CartPagePresenterTests.swift in Sources */,
 				3B44770A298DBE01004D9AA5 /* LoadPromotionsUseCaseTests.swift in Sources */,
 				3B44773D298DDE75004D9AA5 /* MainPagePresenterTests.swift in Sources */,

@@ -18,15 +18,18 @@ class CartPagePresenter: ObservableObject {
     private let loadCartUseCase: LoadCartUseCase
     private let loadPromotionsUseCase: LoadPromotionsUseCase
     private let cartObserveUseCase: CartObserveUseCase
+    private let removeProductFromCartUseCase: RemoveProductFromCartUseCase
 
     private var cancellables: Set<AnyCancellable> = []
 
     init(loadCartUseCase: LoadCartUseCase,
          loadPromotionsUseCase: LoadPromotionsUseCase,
-         cartObserveUseCase: CartObserveUseCase) {
+         cartObserveUseCase: CartObserveUseCase,
+         removeProductFromCartUseCase: RemoveProductFromCartUseCase) {
         self.loadCartUseCase = loadCartUseCase
         self.loadPromotionsUseCase = loadPromotionsUseCase
         self.cartObserveUseCase = cartObserveUseCase
+        self.removeProductFromCartUseCase = removeProductFromCartUseCase
     
         self.cartObserveUseCase.execute().sink { [weak self] productsInCart in
             guard let self = self else { return }
@@ -39,6 +42,14 @@ class CartPagePresenter: ObservableObject {
         domainPromotions = loadPromotionsUseCase.execute()
         domainProducts = loadCartUseCase.execute()
         cart = mapToCart()
+    }
+    
+    func removeProduct(product: ProductItemPresentable) {
+        let idx = cart.products.firstIndex { $0.id == product.id }
+        guard let idx = idx else {
+            return
+        }
+        removeProductFromCartUseCase.execute(productIdx: UInt(idx))
     }
 
     private func mapToCart() -> CartPresentable {

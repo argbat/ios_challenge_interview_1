@@ -20,7 +20,7 @@ struct CartPageView: View {
                 discounts: "$5.00",
                 youWillPay: "$25.00"
             ),
-            onRemove: { _ in }
+            onRemove: { product in cartPresenter.removeProduct(product: product) }
         )
     }
 }
