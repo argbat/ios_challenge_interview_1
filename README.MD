@@ -40,10 +40,6 @@ On this project we are using a ViewModel just as data object that will hold form
 data ready to display, Views will use this object. A Presenter holds any view logic and
 builds a ViewModel from a Domain Model.
 
-## Application Architecture Exmaple diagrams.
-<img src="arch.png" width="70%" height="60%">
-<img src="seq.png" width="70%" height="60%">
-
 ## How do we resolve the 'discounts are going to change frequently'.
 We decided to go with a promotion strategy built from a promotion code. Then a promotion instance will use that promotion strategy to calculate the new price according. It is kind of strategy pattern.
 
@@ -51,7 +47,11 @@ If on the future we need to add a new promotion strategy then the use case than 
 
 For a more flexible solution we should implement a kind of rules engine. This engine can interpret rules to apply by using an Iterpreter pattern.
 
-## Imprvements.
+## Application Architecture Exmaple diagrams.
+<img src="arch.png" width="70%" height="60%">
+<img src="seq.png" width="70%" height="60%">
+
+## Improvements.
 Better products api.<br>
 We can manage enviorments setup by having one target and plist files with configurations (ex: base url) for each env.<br>
 We can add a static code analyzer like SwiftLint.<br>
