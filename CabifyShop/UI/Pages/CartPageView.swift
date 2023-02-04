@@ -17,6 +17,7 @@ struct CartPageView: View {
             checkout: cartPresenter.checkout,
             onRemove: { product in cartPresenter.removeProduct(product: product) }
         )
+        .onAppear { cartPresenter.load() }
     }
 }
 
