@@ -10,6 +10,16 @@
 		3B4253EB298DE46000DBB09C /* CartRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253EA298DE46000DBB09C /* CartRepositoryImplTests.swift */; };
 		3B4253ED298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253EC298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift */; };
 		3B4253EF298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253EE298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift */; };
+		3B4253F1298DEE2200DBB09C /* NoPromotionStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253F0298DEE2200DBB09C /* NoPromotionStrategyTests.swift */; };
+		3B4253F3298DEE4A00DBB09C /* PromotionStrategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253F2298DEE4A00DBB09C /* PromotionStrategies.swift */; };
+		3B4253F6298DEF4E00DBB09C /* CartCalculatorUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253F4298DEF4500DBB09C /* CartCalculatorUseCaseTests.swift */; };
+		3B4253F8298DEF9300DBB09C /* PromotionStrategiesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253F7298DEF9300DBB09C /* PromotionStrategiesRepository.swift */; };
+		3B4253FA298DEFB500DBB09C /* PromotionStrategiesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253F9298DEFB500DBB09C /* PromotionStrategiesRepositoryImpl.swift */; };
+		3B4253FC298DEFF500DBB09C /* CartCalculatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253FB298DEFF500DBB09C /* CartCalculatorUseCase.swift */; };
+		3B4253FE298DF01900DBB09C /* CartCalculatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253FD298DF01900DBB09C /* CartCalculatorResult.swift */; };
+		3B425400298DF03600DBB09C /* CartTotalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4253FF298DF03600DBB09C /* CartTotalCalculator.swift */; };
+		3B425402298DF0AE00DBB09C /* TwoForOnePromotionStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B425401298DF0AE00DBB09C /* TwoForOnePromotionStrategyTests.swift */; };
+		3B425404298DF0C500DBB09C /* DiscountForQuantityPromotionStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B425403298DF0C500DBB09C /* DiscountForQuantityPromotionStrategyTests.swift */; };
 		3B44767B298D8FC3004D9AA5 /* CabifyShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44767A298D8FC3004D9AA5 /* CabifyShopApp.swift */; };
 		3B44767F298D8FC4004D9AA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B44767E298D8FC4004D9AA5 /* Assets.xcassets */; };
 		3B447683298D8FC4004D9AA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B447682298D8FC4004D9AA5 /* Preview Assets.xcassets */; };
@@ -98,6 +108,16 @@
 		3B4253EA298DE46000DBB09C /* CartRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRepositoryImplTests.swift; sourceTree = "<group>"; };
 		3B4253EC298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductFromCartUseCase.swift; sourceTree = "<group>"; };
 		3B4253EE298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductFromCartUseCaseTests.swift; sourceTree = "<group>"; };
+		3B4253F0298DEE2200DBB09C /* NoPromotionStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPromotionStrategyTests.swift; sourceTree = "<group>"; };
+		3B4253F2298DEE4A00DBB09C /* PromotionStrategies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionStrategies.swift; sourceTree = "<group>"; };
+		3B4253F4298DEF4500DBB09C /* CartCalculatorUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCalculatorUseCaseTests.swift; sourceTree = "<group>"; };
+		3B4253F7298DEF9300DBB09C /* PromotionStrategiesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionStrategiesRepository.swift; sourceTree = "<group>"; };
+		3B4253F9298DEFB500DBB09C /* PromotionStrategiesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionStrategiesRepositoryImpl.swift; sourceTree = "<group>"; };
+		3B4253FB298DEFF500DBB09C /* CartCalculatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCalculatorUseCase.swift; sourceTree = "<group>"; };
+		3B4253FD298DF01900DBB09C /* CartCalculatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCalculatorResult.swift; sourceTree = "<group>"; };
+		3B4253FF298DF03600DBB09C /* CartTotalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTotalCalculator.swift; sourceTree = "<group>"; };
+		3B425401298DF0AE00DBB09C /* TwoForOnePromotionStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoForOnePromotionStrategyTests.swift; sourceTree = "<group>"; };
+		3B425403298DF0C500DBB09C /* DiscountForQuantityPromotionStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountForQuantityPromotionStrategyTests.swift; sourceTree = "<group>"; };
 		3B447677298D8FC3004D9AA5 /* CabifyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabifyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B44767A298D8FC3004D9AA5 /* CabifyShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyShopApp.swift; sourceTree = "<group>"; };
 		3B44767E298D8FC4004D9AA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -336,6 +356,9 @@
 			children = (
 				3B4476C4298D979F004D9AA5 /* Product.swift */,
 				3B4476FC298DBA80004D9AA5 /* Promotion.swift */,
+				3B4253F2298DEE4A00DBB09C /* PromotionStrategies.swift */,
+				3B4253FD298DF01900DBB09C /* CartCalculatorResult.swift */,
+				3B4253FF298DF03600DBB09C /* CartTotalCalculator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -493,6 +516,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4476FA298DBA67004D9AA5 /* PromotionsRepository.swift */,
+				3B4253F7298DEF9300DBB09C /* PromotionStrategiesRepository.swift */,
 			);
 			path = Promotions;
 			sourceTree = "<group>";
@@ -501,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4476FF298DBAB2004D9AA5 /* PromotionsRepositoryImpl.swift */,
+				3B4253F9298DEFB500DBB09C /* PromotionStrategiesRepositoryImpl.swift */,
 			);
 			path = Promotions;
 			sourceTree = "<group>";
@@ -517,6 +542,9 @@
 			isa = PBXGroup;
 			children = (
 				3B447705298DBB97004D9AA5 /* PromotionTests.swift */,
+				3B4253F0298DEE2200DBB09C /* NoPromotionStrategyTests.swift */,
+				3B425401298DF0AE00DBB09C /* TwoForOnePromotionStrategyTests.swift */,
+				3B425403298DF0C500DBB09C /* DiscountForQuantityPromotionStrategyTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -529,6 +557,7 @@
 				3B447738298DDAF3004D9AA5 /* AddProductToCartUseCase.swift */,
 				3B44773E298DDEBC004D9AA5 /* CartCounterObserveUseCase.swift */,
 				3B4253EC298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift */,
+				3B4253FB298DEFF500DBB09C /* CartCalculatorUseCase.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -572,6 +601,7 @@
 				3B447732298DD758004D9AA5 /* LoadCartUseCaseTests.swift */,
 				3B447736298DDADA004D9AA5 /* AddToCartUseCaseTests.swift */,
 				3B4253EE298DE79B00DBB09C /* RemoveProductFromCartUseCaseTests.swift */,
+				3B4253F4298DEF4500DBB09C /* CartCalculatorUseCaseTests.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -706,10 +736,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4253FA298DEFB500DBB09C /* PromotionStrategiesRepositoryImpl.swift in Sources */,
 				3B4476DC298D9AF9004D9AA5 /* LoadProductsResponse.swift in Sources */,
 				3B447727298DD5DE004D9AA5 /* CartRepository.swift in Sources */,
 				3B44773F298DDEBC004D9AA5 /* CartCounterObserveUseCase.swift in Sources */,
 				3B4476AF298D948C004D9AA5 /* ProductItemPresentable.swift in Sources */,
+				3B4253FE298DF01900DBB09C /* CartCalculatorResult.swift in Sources */,
 				3B447712298DCF9E004D9AA5 /* ProductInCartItemView.swift in Sources */,
 				3B4476C8298D97F2004D9AA5 /* LoadProductsUseCase.swift in Sources */,
 				3B447700298DBAB2004D9AA5 /* PromotionsRepositoryImpl.swift in Sources */,
@@ -718,6 +750,7 @@
 				3B4253ED298DE77A00DBB09C /* RemoveProductFromCartUseCase.swift in Sources */,
 				3B4476E1298D9B53004D9AA5 /* ProductsApi.swift in Sources */,
 				3B44770C298DCE9E004D9AA5 /* CartPageView.swift in Sources */,
+				3B4253F3298DEE4A00DBB09C /* PromotionStrategies.swift in Sources */,
 				3B4476C5298D979F004D9AA5 /* Product.swift in Sources */,
 				3B44767B298D8FC3004D9AA5 /* CabifyShopApp.swift in Sources */,
 				3B44772C298DD683004D9AA5 /* CartObserveUseCase.swift in Sources */,
@@ -727,8 +760,10 @@
 				3B447710298DCF37004D9AA5 /* CartPresentable.swift in Sources */,
 				3B447739298DDAF3004D9AA5 /* AddProductToCartUseCase.swift in Sources */,
 				3B4476BD298D95EE004D9AA5 /* ProductPriceView.swift in Sources */,
+				3B425400298DF03600DBB09C /* CartTotalCalculator.swift in Sources */,
 				3B447724298DD5C8004D9AA5 /* LoadCartUseCase.swift in Sources */,
 				3B447716298DD00F004D9AA5 /* AsEmpty.swift in Sources */,
+				3B4253F8298DEF9300DBB09C /* PromotionStrategiesRepository.swift in Sources */,
 				3B4476AD298D9433004D9AA5 /* ProductsPageView.swift in Sources */,
 				3B4476FD298DBA80004D9AA5 /* Promotion.swift in Sources */,
 				3B4476CD298D9832004D9AA5 /* ProductsRepository.swift in Sources */,
@@ -738,6 +773,7 @@
 				3B4476BF298D9718004D9AA5 /* ProductsPagePresenter.swift in Sources */,
 				3B4476E3298D9B8D004D9AA5 /* ProductsApiImpl.swift in Sources */,
 				3B4476B5298D9506004D9AA5 /* AsCard.swift in Sources */,
+				3B4253FC298DEFF500DBB09C /* CartCalculatorUseCase.swift in Sources */,
 				3B4476D5298D9A13004D9AA5 /* Formatters.swift in Sources */,
 				3B4476BB298D956A004D9AA5 /* CabifyButton.swift in Sources */,
 				3B447714298DCFD7004D9AA5 /* CartCheckoutView.swift in Sources */,
@@ -757,13 +793,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4253F1298DEE2200DBB09C /* NoPromotionStrategyTests.swift in Sources */,
 				3B44768D298D8FC5004D9AA5 /* CabifyShopTests.swift in Sources */,
 				3B44771A298DD0F7004D9AA5 /* CheckoutPresentableTests.swift in Sources */,
 				3B4476D1298D98AA004D9AA5 /* LoadProductsUseCaseTests.swift in Sources */,
 				3B44771C298DD194004D9AA5 /* CartPresentableTests.swift in Sources */,
 				3B4476EE298D9DCB004D9AA5 /* ProductsPagePresenterTests.swift in Sources */,
+				3B425404298DF0C500DBB09C /* DiscountForQuantityPromotionStrategyTests.swift in Sources */,
 				3B447737298DDADA004D9AA5 /* AddToCartUseCaseTests.swift in Sources */,
 				3B4476F2298D9F19004D9AA5 /* MainPagePresentableTests.swift in Sources */,
+				3B4253F6298DEF4E00DBB09C /* CartCalculatorUseCaseTests.swift in Sources */,
 				3B447706298DBB97004D9AA5 /* PromotionTests.swift in Sources */,
 				3B4476D3298D991F004D9AA5 /* Mocks.swift in Sources */,
 				3B4253EB298DE46000DBB09C /* CartRepositoryImplTests.swift in Sources */,
@@ -775,6 +814,7 @@
 				3B447708298DBD80004D9AA5 /* PromotionsRepositoryImplTests.swift in Sources */,
 				3B447733298DD758004D9AA5 /* LoadCartUseCaseTests.swift in Sources */,
 				3B4476EA298D9C4E004D9AA5 /* ProductsRepositoryImplTests.swift in Sources */,
+				3B425402298DF0AE00DBB09C /* TwoForOnePromotionStrategyTests.swift in Sources */,
 				3B44772E298DD6F0004D9AA5 /* CartObserveUseCaseTests.swift in Sources */,
 				3B4476F0298D9EAC004D9AA5 /* ProductItemPresentableTests.swift in Sources */,
 			);

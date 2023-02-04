@@ -51,6 +51,11 @@ let promotionEmpty = Promotion(
     description: ""
 )
 
+let promotionStrategyTwoForOne = TwoForOnePromotionStrategy()
+
+let promotionStrategyDiscount_3_19 = DiscountForQuantityPromotionStrategy(
+    activationQuantity: 3, promotedPrice: Decimal(19.00))
+
 //MARK: - Cart Repository Mocks
 class CartRepositoryMock: CartRepository {
     var didSave: AnyPublisher<[Product], Never> {
@@ -71,7 +76,7 @@ class CartRepositoryMock: CartRepository {
     }
 }
 
-// MARK: - Promotions Repositiry Mocks
+// MARK: - Promotions Repository Mocks
 class EmptyPromotionsRepositoryMock: PromotionsRepository {
     func load() -> [Promotion] {
         []
@@ -82,6 +87,18 @@ class PromotionsRepositoryMock: PromotionsRepository {
     private let repo: [Promotion] = [promotionProduct1Code, promotionProduct2Code]
     
     func load() -> [Promotion] {
+        repo
+    }
+}
+
+// MARK: - Promotion Strategies Repositiry Mocks
+class PromotionStrategiesRepositoryMock: PromotionStrategiesRepository {
+    private let repo: [Promotion.Code: PromotionStrategy] = [
+        .twoForOne: promotionStrategyTwoForOne,
+        .discount: promotionStrategyDiscount_3_19
+    ]
+    
+    func load() -> [Promotion.Code: PromotionStrategy] {
         repo
     }
 }
