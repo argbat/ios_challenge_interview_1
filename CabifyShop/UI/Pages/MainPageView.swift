@@ -9,15 +9,17 @@ import SwiftUI
 
 /// App main page.
 struct MainPageView: View {
+    @ObservedObject var presenter: MainPagePresenter
     let productsPresenter: ProductsPagePresenter
     let cartPresenter: CartPagePresenter
     
     var body: some View {
         MainView(
-            viewPresentable: MainPagePresentable(cartBadgeValue: 99),
+            viewPresentable: presenter.mainPage,
             productsPresenter: productsPresenter,
             cartPresenter: cartPresenter
         )
+        .onAppear { presenter.observeUpdates() }
     }
 }
 

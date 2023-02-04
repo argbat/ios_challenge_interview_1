@@ -69,6 +69,9 @@
 		3B447735298DD79B004D9AA5 /* CartPagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447734298DD79B004D9AA5 /* CartPagePresenterTests.swift */; };
 		3B447737298DDADA004D9AA5 /* AddToCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447736298DDADA004D9AA5 /* AddToCartUseCaseTests.swift */; };
 		3B447739298DDAF3004D9AA5 /* AddProductToCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447738298DDAF3004D9AA5 /* AddProductToCartUseCase.swift */; };
+		3B44773B298DDE0E004D9AA5 /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44773A298DDE0E004D9AA5 /* MainPagePresenter.swift */; };
+		3B44773D298DDE75004D9AA5 /* MainPagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44773C298DDE75004D9AA5 /* MainPagePresenterTests.swift */; };
+		3B44773F298DDEBC004D9AA5 /* CartCounterObserveUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44773E298DDEBC004D9AA5 /* CartCounterObserveUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +158,9 @@
 		3B447734298DD79B004D9AA5 /* CartPagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPagePresenterTests.swift; sourceTree = "<group>"; };
 		3B447736298DDADA004D9AA5 /* AddToCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartUseCaseTests.swift; sourceTree = "<group>"; };
 		3B447738298DDAF3004D9AA5 /* AddProductToCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToCartUseCase.swift; sourceTree = "<group>"; };
+		3B44773A298DDE0E004D9AA5 /* MainPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresenter.swift; sourceTree = "<group>"; };
+		3B44773C298DDE75004D9AA5 /* MainPagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresenterTests.swift; sourceTree = "<group>"; };
+		3B44773E298DDEBC004D9AA5 /* CartCounterObserveUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCounterObserveUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +276,7 @@
 		3B4476A9298D92FB004D9AA5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3B44773A298DDE0E004D9AA5 /* MainPagePresenter.swift */,
 				3B4476BE298D9718004D9AA5 /* ProductsPagePresenter.swift */,
 				3B447720298DD49F004D9AA5 /* CartPagePresenter.swift */,
 				3B4476AA298D9312004D9AA5 /* MainPagePresentable.swift */,
@@ -464,6 +471,7 @@
 		3B4476EB298D9DA5004D9AA5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3B44773C298DDE75004D9AA5 /* MainPagePresenterTests.swift */,
 				3B4476ED298D9DCB004D9AA5 /* ProductsPagePresenterTests.swift */,
 				3B447734298DD79B004D9AA5 /* CartPagePresenterTests.swift */,
 				3B4476EF298D9EAC004D9AA5 /* ProductItemPresentableTests.swift */,
@@ -520,6 +528,7 @@
 				3B447723298DD5C8004D9AA5 /* LoadCartUseCase.swift */,
 				3B44772B298DD683004D9AA5 /* CartObserveUseCase.swift */,
 				3B447738298DDAF3004D9AA5 /* AddProductToCartUseCase.swift */,
+				3B44773E298DDEBC004D9AA5 /* CartCounterObserveUseCase.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -698,6 +707,7 @@
 			files = (
 				3B4476DC298D9AF9004D9AA5 /* LoadProductsResponse.swift in Sources */,
 				3B447727298DD5DE004D9AA5 /* CartRepository.swift in Sources */,
+				3B44773F298DDEBC004D9AA5 /* CartCounterObserveUseCase.swift in Sources */,
 				3B4476AF298D948C004D9AA5 /* ProductItemPresentable.swift in Sources */,
 				3B447712298DCF9E004D9AA5 /* ProductInCartItemView.swift in Sources */,
 				3B4476C8298D97F2004D9AA5 /* LoadProductsUseCase.swift in Sources */,
@@ -720,6 +730,7 @@
 				3B4476AD298D9433004D9AA5 /* ProductsPageView.swift in Sources */,
 				3B4476FD298DBA80004D9AA5 /* Promotion.swift in Sources */,
 				3B4476CD298D9832004D9AA5 /* ProductsRepository.swift in Sources */,
+				3B44773B298DDE0E004D9AA5 /* MainPagePresenter.swift in Sources */,
 				3B4476C1298D976F004D9AA5 /* ErrorPresentable.swift in Sources */,
 				3B4476F6298DB5A2004D9AA5 /* AsLoading.swift in Sources */,
 				3B4476BF298D9718004D9AA5 /* ProductsPagePresenter.swift in Sources */,
@@ -756,6 +767,7 @@
 				3B4476E7298D9C01004D9AA5 /* ProductsApiIntegrationTests.swift in Sources */,
 				3B447735298DD79B004D9AA5 /* CartPagePresenterTests.swift in Sources */,
 				3B44770A298DBE01004D9AA5 /* LoadPromotionsUseCaseTests.swift in Sources */,
+				3B44773D298DDE75004D9AA5 /* MainPagePresenterTests.swift in Sources */,
 				3B447708298DBD80004D9AA5 /* PromotionsRepositoryImplTests.swift in Sources */,
 				3B447733298DD758004D9AA5 /* LoadCartUseCaseTests.swift in Sources */,
 				3B4476EA298D9C4E004D9AA5 /* ProductsRepositoryImplTests.swift in Sources */,

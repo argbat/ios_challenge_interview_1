@@ -47,7 +47,15 @@ struct Composer {
         AddProductToCartUseCase(cartRepository: Composer.cartRepo)
     }
     
+    func makeCartCounterObserveUseCase() -> CartCounterObserveUseCase {
+        CartCounterObserveUseCase(cartRepository: Composer.cartRepo)
+    }
+    
 // MARK: - Presenters
+    func makeMainPagePresenter() -> MainPagePresenter {
+        MainPagePresenter(cartCounterObserveUseCase: makeCartCounterObserveUseCase())
+    }
+
     func makeProductsPagePresenter() -> ProductsPagePresenter {
         ProductsPagePresenter(
             loadProductsUseCase: makeLoadProductsUseCase(),
