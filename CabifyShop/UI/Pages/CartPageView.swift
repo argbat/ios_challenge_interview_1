@@ -9,13 +9,17 @@ import SwiftUI
 
 /// Use this view to display a cart page.
 struct CartPageView: View {
-    let cart: CartPresentable
-    let checkout: CheckoutPresentable
+    @ObservedObject var cartPresenter: CartPagePresenter
     
     var body: some View {
         CartView(
-            cart: cart,
-            checkout: checkout,
+            cart: cartPresenter.cart,
+            checkout: CheckoutPresentable(
+                subtotal: "$30.00",
+                showDiscounts: true,
+                discounts: "$5.00",
+                youWillPay: "$25.00"
+            ),
             onRemove: { _ in }
         )
     }
