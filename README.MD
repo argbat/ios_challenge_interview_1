@@ -5,7 +5,20 @@ xCode 14.0.1<br>
 Min Target iOS 16<br>
 Testing device iPhone 13mini with iOS 16<br>
 
+## Branching strategy
+We will follow this simplified branching strategy:
+
+* main<br>
+*squash and merge* develop into this branch to have a production build with current develop status.
+
+* develop<br>
+keeps the implemented features, any feture / fix branch has develop as parent branch.
+
+* feature/xyz fix/xyz<br>
+branched from develop, implement feature or fix, file a PR, once approved *squash and merge* into develop.
+
 ## Run the project
+Clone the project, it is ok to run from main branch.<br>
 Open the project on xCode and run it.<br>
 No external libraries were used, so it should run right away.<br>
 You can also run the unit tests.<br>
@@ -60,3 +73,5 @@ No pagination support. Backend service does not provide pagination.<br>
 Use string localization.<br>
 Use a logging system for logging errors.<br>
 Better cart UX, we can group the products and add a +/- buttons to update the quanity.<br>
+Better support for light/dark modes.<br>
+Improve the theme/styling strategy.<br>
