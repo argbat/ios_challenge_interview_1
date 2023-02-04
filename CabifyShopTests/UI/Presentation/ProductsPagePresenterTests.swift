@@ -13,14 +13,17 @@ import Combine
 class ProductsPagePresenterTests: XCTestCase {
     func test_load_error() {
         let productsRepo = ErrorLoadProductsRepositoryMock(error: .UnableToLoad)
-        let loadProductsUseCase = LoadProductsUseCase(
-            productsRepository: productsRepo
-        )
         let promoRepo = PromotionsRepositoryMock()
+        let cartRepo = CartRepositoryMock()
+        
+        let loadProductsUseCase = LoadProductsUseCase(productsRepository: productsRepo)
         let loadPromotionsUseCase = LoadPromotionsUseCase(promotionsRepository: promoRepo)
+        let addToCartUseCase = AddProductToCartUseCase(cartRepository: cartRepo)
+        
         let sut = ProductsPagePresenter(
             loadProductsUseCase: loadProductsUseCase,
-            loadPromotionsUseCase: loadPromotionsUseCase
+            loadPromotionsUseCase: loadPromotionsUseCase,
+            addProductToCartUseCase: addToCartUseCase
         )
         
         sut.load()
@@ -38,14 +41,17 @@ class ProductsPagePresenterTests: XCTestCase {
     
     func test_load_notEmpty() {
         let productsRepo = NotEmptyLoadProductsRepositoryMock()
-        let loadProductsUseCase = LoadProductsUseCase(
-            productsRepository: productsRepo
-        )
         let promoRepo = PromotionsRepositoryMock()
+        let cartRepo = CartRepositoryMock()
+        
+        let loadProductsUseCase = LoadProductsUseCase(productsRepository: productsRepo)
         let loadPromotionsUseCase = LoadPromotionsUseCase(promotionsRepository: promoRepo)
+        let addToCartUseCase = AddProductToCartUseCase(cartRepository: cartRepo)
+        
         let sut = ProductsPagePresenter(
             loadProductsUseCase: loadProductsUseCase,
-            loadPromotionsUseCase: loadPromotionsUseCase
+            loadPromotionsUseCase: loadPromotionsUseCase,
+            addProductToCartUseCase: addToCartUseCase
         )
         
         sut.load()
@@ -62,14 +68,17 @@ class ProductsPagePresenterTests: XCTestCase {
     
     func test_load_empty() {
         let productsRepo = EmptyLoadProductsRepositoryMock()
-        let loadProductsUseCase = LoadProductsUseCase(
-            productsRepository: productsRepo
-        )
         let promoRepo = PromotionsRepositoryMock()
+        let cartRepo = CartRepositoryMock()
+        
+        let loadProductsUseCase = LoadProductsUseCase(productsRepository: productsRepo)
         let loadPromotionsUseCase = LoadPromotionsUseCase(promotionsRepository: promoRepo)
+        let addToCartUseCase = AddProductToCartUseCase(cartRepository: cartRepo)
+        
         let sut = ProductsPagePresenter(
             loadProductsUseCase: loadProductsUseCase,
-            loadPromotionsUseCase: loadPromotionsUseCase
+            loadPromotionsUseCase: loadPromotionsUseCase,
+            addProductToCartUseCase: addToCartUseCase
         )
         
         sut.load()
@@ -82,5 +91,59 @@ class ProductsPagePresenterTests: XCTestCase {
             exp.fulfill()
         }.store(in: &cancellables)
         waitForExpectations(timeout: 0.1)
+    }
+    
+    func test_addToCart_oneAddedToEmptyCart() {
+        let productsRepo = NotEmptyLoadProductsRepositoryMock()
+        let promoRepo = PromotionsRepositoryMock()
+        let cartRepo = CartRepositoryMock()
+        
+        let loadProductsUseCase = LoadProductsUseCase(productsRepository: productsRepo)
+        let loadPromotionsUseCase = LoadPromotionsUseCase(promotionsRepository: promoRepo)
+        let addToCartUseCase = AddProductToCartUseCase(cartRepository: cartRepo)
+        
+        let sut = ProductsPagePresenter(
+            loadProductsUseCase: loadProductsUseCase,
+            loadPromotionsUseCase: loadPromotionsUseCase,
+            addProductToCartUseCase: addToCartUseCase
+        )
+        
+        sut.load()
+
+        XCTAssertEqual(cartRepo.cart.count, 0)
+        
+        sut.addToCart(
+            product: ProductItemPresentable.map(
+                product: product1,
+                promotions: [promotionProduct1Code, promotionProduct2Code]
+            )!)
+        
+        XCTAssertEqual(cartRepo.cart.count, 1)
+    }
+    
+    func test_addToCart_oneAddedToNotEmptyCart() {
+        let productsRepo = NotEmptyLoadProductsRepositoryMock()
+        let promoRepo = PromotionsRepositoryMock()
+        let cartRepo = CartRepositoryMock()
+        
+        let loadProductsUseCase = LoadProductsUseCase(productsRepository: productsRepo)
+        let loadPromotionsUseCase = LoadPromotionsUseCase(promotionsRepository: promoRepo)
+        let addToCartUseCase = AddProductToCartUseCase(cartRepository: cartRepo)
+        
+        let sut = ProductsPagePresenter(
+            loadProductsUseCase: loadProductsUseCase,
+            loadPromotionsUseCase: loadPromotionsUseCase,
+            addProductToCartUseCase: addToCartUseCase
+        )
+        
+        sut.load()
+        cartRepo.save(updatedCart: [product1])
+        
+        sut.addToCart(
+            product: ProductItemPresentable.map(
+                product: product1,
+                promotions: [promotionProduct1Code, promotionProduct2Code])!)
+        
+        XCTAssertEqual(cartRepo.cart.count, 2)
     }
 }

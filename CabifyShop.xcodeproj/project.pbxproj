@@ -67,6 +67,8 @@
 		3B44772E298DD6F0004D9AA5 /* CartObserveUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44772D298DD6F0004D9AA5 /* CartObserveUseCaseTests.swift */; };
 		3B447733298DD758004D9AA5 /* LoadCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447732298DD758004D9AA5 /* LoadCartUseCaseTests.swift */; };
 		3B447735298DD79B004D9AA5 /* CartPagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447734298DD79B004D9AA5 /* CartPagePresenterTests.swift */; };
+		3B447737298DDADA004D9AA5 /* AddToCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447736298DDADA004D9AA5 /* AddToCartUseCaseTests.swift */; };
+		3B447739298DDAF3004D9AA5 /* AddProductToCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B447738298DDAF3004D9AA5 /* AddProductToCartUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,8 @@
 		3B44772D298DD6F0004D9AA5 /* CartObserveUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartObserveUseCaseTests.swift; sourceTree = "<group>"; };
 		3B447732298DD758004D9AA5 /* LoadCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCartUseCaseTests.swift; sourceTree = "<group>"; };
 		3B447734298DD79B004D9AA5 /* CartPagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPagePresenterTests.swift; sourceTree = "<group>"; };
+		3B447736298DDADA004D9AA5 /* AddToCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartUseCaseTests.swift; sourceTree = "<group>"; };
+		3B447738298DDAF3004D9AA5 /* AddProductToCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToCartUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +519,7 @@
 			children = (
 				3B447723298DD5C8004D9AA5 /* LoadCartUseCase.swift */,
 				3B44772B298DD683004D9AA5 /* CartObserveUseCase.swift */,
+				3B447738298DDAF3004D9AA5 /* AddProductToCartUseCase.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -556,6 +561,7 @@
 			children = (
 				3B44772D298DD6F0004D9AA5 /* CartObserveUseCaseTests.swift */,
 				3B447732298DD758004D9AA5 /* LoadCartUseCaseTests.swift */,
+				3B447736298DDADA004D9AA5 /* AddToCartUseCaseTests.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -707,6 +713,7 @@
 				3B4476A8298D92AD004D9AA5 /* MainPageView.swift in Sources */,
 				3B447721298DD49F004D9AA5 /* CartPagePresenter.swift in Sources */,
 				3B447710298DCF37004D9AA5 /* CartPresentable.swift in Sources */,
+				3B447739298DDAF3004D9AA5 /* AddProductToCartUseCase.swift in Sources */,
 				3B4476BD298D95EE004D9AA5 /* ProductPriceView.swift in Sources */,
 				3B447724298DD5C8004D9AA5 /* LoadCartUseCase.swift in Sources */,
 				3B447716298DD00F004D9AA5 /* AsEmpty.swift in Sources */,
@@ -742,6 +749,7 @@
 				3B4476D1298D98AA004D9AA5 /* LoadProductsUseCaseTests.swift in Sources */,
 				3B44771C298DD194004D9AA5 /* CartPresentableTests.swift in Sources */,
 				3B4476EE298D9DCB004D9AA5 /* ProductsPagePresenterTests.swift in Sources */,
+				3B447737298DDADA004D9AA5 /* AddToCartUseCaseTests.swift in Sources */,
 				3B4476F2298D9F19004D9AA5 /* MainPagePresentableTests.swift in Sources */,
 				3B447706298DBB97004D9AA5 /* PromotionTests.swift in Sources */,
 				3B4476D3298D991F004D9AA5 /* Mocks.swift in Sources */,
