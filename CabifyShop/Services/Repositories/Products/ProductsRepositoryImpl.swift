@@ -10,7 +10,7 @@ import Foundation
 
 /// A products repository implementation that only manage data from a backend.
 class ProductsRepositoryImpl: ProductsRepository {
-    let api: ProductsApi
+    private let api: ProductsApi
 
     init(api: ProductsApi) {
         self.api = api

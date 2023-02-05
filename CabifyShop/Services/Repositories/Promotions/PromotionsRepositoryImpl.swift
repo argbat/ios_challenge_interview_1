@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PromotionsRepositoryImpl: PromotionsRepository {
+class PromotionsRepositoryImpl: PromotionsRepository {
     private let repo: [Promotion] = [
         Promotion(
             code: .discount,

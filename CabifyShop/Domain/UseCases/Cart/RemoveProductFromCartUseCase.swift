@@ -5,8 +5,12 @@
 //  Created by Demian Odasso on 01/02/2023.
 //
 
-struct RemoveProductFromCartUseCase {
-    let cartRepository: CartRepository
+class RemoveProductFromCartUseCase {
+    private let cartRepository: CartRepository
+    
+    init(cartRepository: CartRepository) {
+        self.cartRepository = cartRepository
+    }
     
     func execute(productIdx: UInt) {
         var cartToUpdate = cartRepository.load()
