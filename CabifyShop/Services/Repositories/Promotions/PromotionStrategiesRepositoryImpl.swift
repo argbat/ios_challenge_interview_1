@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PromotionStrategiesRepositoryImpl: PromotionStrategiesRepository {
+class PromotionStrategiesRepositoryImpl: PromotionStrategiesRepository {
     private let strategies: [Promotion.Code: PromotionStrategy] = [
         .twoForOne: TwoForOnePromotionStrategy(),
         .discount: DiscountForQuantityPromotionStrategy(

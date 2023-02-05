@@ -12,9 +12,14 @@ enum ApiErrors: Error, Equatable {
     case ResponseNotSupported
 }
 
-struct ProductsApiImpl: ProductsApi {
-    let baseUrl: String
-    let session: URLSession
+class ProductsApiImpl: ProductsApi {
+    private let baseUrl: String
+    private let session: URLSession
+    
+    init(baseUrl: String, session: URLSession) {
+        self.baseUrl = baseUrl
+        self.session = session
+    }
     
     func loadProducts() -> AnyPublisher<Data, Error> {
         let url = URL(string: baseUrl.appending("palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887/Products.json"))!

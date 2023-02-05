@@ -8,12 +8,16 @@
 import Foundation
 
 /// Calculates a new total price giving items and promotions .
-struct CartTotalCalculator {
+class CartTotalCalculator {
     enum CartTotalCalculatorErrors: Error, Equatable {
         case NoPromotionForProduct
     }
 
-    let strategyBuilder: (Promotion.Code) -> PromotionStrategy
+    private let strategyBuilder: (Promotion.Code) -> PromotionStrategy
+    
+    init(strategyBuilder: @escaping (Promotion.Code) -> PromotionStrategy) {
+        self.strategyBuilder = strategyBuilder
+    }
     
     /// Gets the total new price
     ///
