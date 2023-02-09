@@ -49,9 +49,9 @@ We will choose number 1, the project has few features and only one Team member (
 
 ## Which UI architechture can we use.
 SwiftUI and Combine framework makes MVVM the preferred one.
-On this project we are using a ViewModel just as data object that will hold formatted
+On this project we are using a ViewModel (called Presentable on my project) just as data object that will hold formatted
 data ready to display, Views will use this object. A Presenter holds any view logic and
-builds a ViewModel from a Domain Model.
+builds a ViewModel (called Presentable on my project) from a Domain Model.
 
 ## How do we resolve the 'discounts are going to change frequently'.
 We decided to go with a promotion strategy built from a promotion code. Then a promotion instance will use that promotion strategy to calculate the new price according. It is kind of strategy pattern.
